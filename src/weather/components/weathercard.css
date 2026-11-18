@@ -1,0 +1,167 @@
+/* Background gradient and page container */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 50%, #e3f2fd 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a202c;
+}
+
+.weather-app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+/* Search Bar Styling */
+.search-form {
+  display: flex;
+  background: #ffffff;
+  padding: 5px 6px 5px 16px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #475467;
+}
+
+.search-button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-button:hover {
+  background: #1d4ed8;
+}
+
+/* Main Weather Card */
+.weather-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px 20px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.city-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #101828;
+  margin: 0 0 12px 0;
+}
+
+.weather-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #101828;
+  margin: 10px 0 4px 0;
+}
+
+.weather-main {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.weather-description {
+  color: #667085;
+  font-size: 0.9rem;
+  margin: 2px 0 24px 0;
+}
+
+/* Horizontal Scroll / Grid Carousel for Metrics */
+.weather-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Scrollbar styling */
+.weather-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.weather-carousel::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+.weather-carousel::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+/* Metric Card Item */
+.metric-card {
+  flex: 0 0 calc(25% - 9px);
+  min-width: 90px;
+  background: #ffffff;
+  border: 1px solid #f2f4f7;
+  border-radius: 16px;
+  padding: 12px 10px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+.metric-icon {
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #667085;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #101828;
+}
